@@ -102,12 +102,13 @@ namespace KinectV2QuaternionChecker
                             QuaternionRotation3D QRotate = new QuaternionRotation3D();
                             Quaternion Q = new Quaternion();
                             Q.W = kinectQ.W;
-                            Q.X = kinectQ.X;
-                            Q.Y = -kinectQ.Y;
-                            Q.Z = kinectQ.Z;
+                            Q.X = -kinectQ.X;
+                            Q.Y = kinectQ.Y;
+                            Q.Z = -kinectQ.Z;
                             QRotate.Quaternion = Q;
                             CuboidRotation.CenterY = -2.5;
                             CuboidRotation.Rotation = QRotate;
+                            
                             FrontRotation.CenterY = -3.189610004425049;
                             FrontRotation.CenterZ = -0.5;
                             FrontRotation.Rotation = QRotate;
